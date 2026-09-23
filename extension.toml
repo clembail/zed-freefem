@@ -8,4 +8,4 @@ repository = "file:///Users/clementbaillet/Informatique/rust/zed-FreeFEM"
 
 [grammars.freefem]
 repository = "file:///Users/clementbaillet/Informatique/rust/zed-FreeFEM"
-rev = "v0.1.0"
+rev = "2691d6760666fa38c1f1d3ffaed6e979e2da95a6"
