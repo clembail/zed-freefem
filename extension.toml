@@ -2,10 +2,10 @@ id = "freefem"
 name = "FreeFEM"
 version = "0.1.0"
 schema_version = 1
-authors = ["Clément Baillet", "Antigravity"]
+authors = ["Clément Baillet <c.bailletpro@icloud.com>"]
 description = "FreeFEM language support for Zed"
-repository = "file:///Users/clementbaillet/Informatique/rust/zed-FreeFEM"
+repository = "https://github.com/clembail/zed-freefem"
 
 [grammars.freefem]
-repository = "file:///Users/clementbaillet/Informatique/rust/zed-FreeFEM"
+repository = "https://github.com/clembail/zed-freefem"
 rev = "2691d6760666fa38c1f1d3ffaed6e979e2da95a6"
