@@ -1,0 +1,7 @@
+name = "FreeFEM"
+grammar = "freefem"
+path_suffixes = ["edp", "idp"]
+line_comments = ["// "]
+block_comment = ["/*", "*/"]
+tab_size = 4
+hard_tabs = false

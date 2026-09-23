@@ -1,0 +1,13 @@
+[
+  {
+    "label": "Run FreeFEM",
+    "command": "sh",
+    "args": [
+      "-c",
+      "NBPROC=$(grep -E '^[[:space:]]*//.*NBPROC' \"$ZED_FILE\" | sed -E 's/.*NBPROC[[:space:]]*([0-9]+).*/\\1/' | head -n 1); PARAM=$(grep -E '^[[:space:]]*//.*PARAM' \"$ZED_FILE\" | sed -E 's/.*PARAM[[:space:]]*(.*)/\\1/' | head -n 1); cd \"$(dirname \"$ZED_FILE\")\" && if [ -z \"$NBPROC\" ] || [ \"$NBPROC\" = \"1\" ]; then FreeFem++ \"$ZED_FILENAME\" -cd $PARAM; else ff-mpirun -np $NBPROC \"$ZED_FILENAME\" -cd $PARAM; fi"
+    ],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]

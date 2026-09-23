@@ -1,0 +1,45 @@
+// 2D Poisson equation with FreeFEM
+// NBPROC 2
+// PARAM -v 0
+
+load "msh3"
+include "getARGV.idp"
+
+// Mesh definition
+mesh Th = square(20, 20);
+
+// Finite element space definition
+fespace Vh(Th, P1);
+Vh u, v;
+
+// Macro definitions (ended with //)
+macro grad(u) [dx(u), dy(u)] //
+
+// Problem definition
+problem laplace(u, v, solver=CG)
+    = int2d(Th)(
+          dx(u)*dx(v)
+        + dy(u)*dy(v)
+    )
+    - int2d(Th)(
+          1.0*v
+    )
+    + on(1, 2, 3, 4, u=0);
+
+// Solve PDE
+laplace;
+
+// Visualization
+plot(u, value=true, fill=true);
+
+// Iterative loop
+int maxIter = 5;
+for (int i = 0; i < maxIter; i++) {
+    cout << "Iteration: " << i << " max(u)=" << u[].max << endl;
+}
+
+if (maxIter > 0) {
+    cout << "Finished successfully" << endl;
+} else {
+    cout << "No iterations performed" << endl;
+}

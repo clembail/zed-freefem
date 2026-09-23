@@ -1,0 +1,22 @@
+{
+  "name": "tree-sitter-freefem",
+  "version": "0.1.0",
+  "description": "FreeFEM grammar for tree-sitter",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "freefem",
+    "tree-sitter"
+  ],
+  "author": "Clément Baillet",
+  "license": "MIT",
+  "tree-sitter": [
+    {
+      "scope": "source.edp",
+      "file-types": [
+        "edp",
+        "idp"
+      ]
+    }
+  ]
+}
