@@ -1,0 +1,11 @@
+id = "freefem"
+name = "FreeFEM"
+version = "0.1.0"
+schema_version = 1
+authors = ["Clément Baillet", "Antigravity"]
+description = "FreeFEM language support for Zed"
+repository = "file:///Users/clementbaillet/Informatique/rust/zed-FreeFEM"
+
+[grammars.freefem]
+repository = "file:///Users/clementbaillet/Informatique/rust/zed-FreeFEM"
+rev = "27822d9f7b3fcadcd28ad86e01083757b943d713"
